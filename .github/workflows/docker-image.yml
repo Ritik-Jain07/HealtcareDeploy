@@ -47,3 +47,4 @@ jobs:
           
             sudo docker pull rjritik/healthcaredeploy
             sudo docker run -dp 80:8000 rjritik/healthcaredeploy 
+        shell: bash
