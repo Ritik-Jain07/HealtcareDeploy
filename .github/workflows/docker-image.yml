@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2 
       - name: Deploy in EC2
-      - uses: shimataro/ssh-key-action@v2
+        uses: shimataro/ssh-key-action@v2
         env:
             PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY  }}
         with:
