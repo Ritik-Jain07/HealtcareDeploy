@@ -45,6 +45,7 @@ jobs:
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -tt -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-18-232-38-208.compute-1.amazonaws.com
           
+      - name: Deploy
+        run: |
           sudo docker pull rjritik/healthcaredeploy &&
           sudo docker run -dp 80:8000 rjritik/healthcaredeploy && exit
-  
